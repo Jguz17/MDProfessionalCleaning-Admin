@@ -19,9 +19,8 @@ class App extends Component {
     return (
       <div className='App'>
         <Switch>
-          <Route path={'/login'} component={Login} />
-          <Route path={'/signup'} component={SignUp} />
-          <Route path={'/'} component={Main} />
+          <Route path={'/dashboard'} component={Main} />
+          <Route path={'/'} component={Login} />
         </Switch>
       </div>
     );

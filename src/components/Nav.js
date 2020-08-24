@@ -5,6 +5,8 @@ import Button from '@material-ui/core/Button';
 import theme from '../themes/theme'
 import { ThemeProvider } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux';
+import { logoutUser } from '../actions/user';
 import '../styles/main.css'
 
 const useStyles = ({
@@ -33,4 +35,10 @@ export class Nav extends Component {
     }
 }
 
-export default withStyles(useStyles)(Nav)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        logout: () => dispatch(logoutUser()),
+    };
+};
+    
+export default connect(null, mapDispatchToProps)(withStyles(useStyles)(Nav));
