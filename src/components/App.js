@@ -23,7 +23,6 @@ class App extends Component {
           <Route path={'/signup'} component={SignUp} />
           <Route path={'/'} component={Main} />
         </Switch>
-        <button onClick={this.props.logout}>logout</button>
       </div>
     );
   }

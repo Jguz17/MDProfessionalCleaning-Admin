@@ -2,3 +2,9 @@ a {
     text-decoration: none;
     color: white;
 }
+
+/* 'color': 'white', 'backgroundColor': 'red' */
+#delete-btn {
+    color: white;
+    background-color: red;
+}

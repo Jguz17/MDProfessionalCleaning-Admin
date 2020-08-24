@@ -85,7 +85,7 @@ function Message(props) {
 
       <CardActions disableSpacing>
       <CardActions>
-        <Button onClick={() => props.removeMessage(props.message.id)} size="small" style={{'color': 'white'}}>Remove</Button>
+        <Button id='delete-btn' onClick={() => props.removeMessage(props.message.id)} size="small">Remove</Button>
       </CardActions>
         <IconButton
           className={clsx(classes.expand, {
