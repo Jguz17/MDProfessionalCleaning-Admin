@@ -9,7 +9,7 @@ export const LOGOUT_USER = "LOGOUT_USER";
 export const getUser = (user) => ({ type: GET_USER, user });
 export const removeUser = () => ({ type: LOGOUT_USER });
 
-const API = "http://localhost:3000/api/v1/";
+const API = "https://mdprofessionalcleaning-api.herokuapp.com/api/v1/";
 
 export const loginUser = (user) => {
   return (dispatch) => {
@@ -28,7 +28,7 @@ export const loginUser = (user) => {
           dispatch(getUser(data.user));
           localStorage.setItem("token", data.jwt);
           //whereever you want to go after logging in
-          history.push("/");
+          history.push("/dashboard");
         }
         //however you want  to  handle the error
         else {
@@ -85,6 +85,6 @@ export const logoutUser = () => {
   return (dispatch) => {
     localStorage.removeItem("token");
     dispatch(removeUser());
-    history.push("/login");
+    history.push("/");
   };
 };
