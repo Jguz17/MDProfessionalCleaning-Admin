@@ -10,7 +10,7 @@ export class Main extends Component {
     }
 
     componentDidMount = () => {
-        fetch('http://localhost:3000/api/v1/messages')
+        fetch('https://mdprofessionalcleaning-api.herokuapp.com/api/v1/messages')
         .then((res) => res.json())
         .then((data) => {
             this.setState({
@@ -20,7 +20,7 @@ export class Main extends Component {
     }
 
     removeMessage = (id) => {
-        fetch(`http://localhost:3000/api/v1/messages/${id}`, { method: 'DELETE'})
+        fetch(`https://mdprofessionalcleaning-api.herokuapp.com/api/v1/messages/${id}`, { method: 'DELETE'})
         .then((res) => res.json())
         .then((data) => {
             this.setState({
